@@ -78,14 +78,21 @@ header ul li a:hover {
     float: left;
 }
 
-.v250 {
+/* 부모 클레스에서 하위 클레스로 상속하기 */
+.v250,
+.v350 {
     height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.v250 h2 {
+.v350 {
+    height: 350px;
+}
+
+.v250 h2,
+.v350 h2 {
     font-size: 1.85rem;
     font-weight: normal;
 }
@@ -113,3 +120,60 @@ header ul li a:hover {
     margin-left: auto;
     margin-right: auto;
 }
+
+.gray-back {
+    background-color: #f2f2f2;
+    padding: 10px 20px;
+    box-sizing: border-box; /* box-sizing에 의한 크기 조정 */
+    overflow: hidden; /*이는 배경 색상이 적용되지 않을 경우 */
+}
+
+.icon-box {
+    width: 25%;
+    float: left;
+    text-align: center; 
+}
+
+.icon-box i {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /*50% 둥근 박스*/
+    background-color: #fff;
+    display: flex; /*display에 flex 속성을 적용하여 아이콘을 중간에 배치*/
+    flex-direction: column;
+    justify-content: center;
+    color: #c9c9c9;
+    margin: auto;
+}
+
+/* footer의 속성 정의 하기 */
+footer {
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+ .footlogo {
+     padding-left: 10px;
+     padding-top: 15px;
+ }
+
+ footer ul {
+     list-style: none;
+ }
+
+ footer ul li {
+     display:  inline-block;
+     padding-left: 15px;
+ }
+
+ footer ul li a {
+     text-decoration: none;
+     color: #999;
+ }
+
+ footer ul li a:hover {
+     border-bottom: 3px solid #fcc6c8;
+     padding-bottom: 8px;
+     color: #fcc6c8;
+ }
