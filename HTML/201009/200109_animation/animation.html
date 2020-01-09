@@ -1,12 +1,12 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>SVG 애니메이션</title>
     <style>
-       svg {
+        svg {
             border: 1px solid #ccc;
             display: block;
             margin: 1em auto;
@@ -21,16 +21,22 @@
         }
     </style>
 </head>
-
 <body>
     <svg>
-        <g translate="translate(420, 420)">
-            <polygon class="st1" points= "116.004,53.59 137.136,112.631 199.817,114.483 150.196,152.826 167.803,213.011 116.004,177.667 64.205,213.011 81.813,152.826 32.191,114.483 94.873,112.631">
-            <animateTransform attributeName="transform" begin="0s" dur="10s" type="rotate" from="0" to="360" repeatCount="indefinite"/>
+        <g transform="translate(420, 420)">
+            <polygon class="st1" points="116.004,53.59 137.136,112.631
+            199.817,114.483 150.196,152.826 167.803,213.011 116.004,177.667 64.205,213.011 81.813,152.826 32.191,114.483 94.873,112.631">
+             <animateTransform
+             attributeName="transform"
+             begin="0s"
+             dur="1s" 
+             type="rotate"
+             from="0 " 
+             to="360" 
+             repeatCount="indefinite" />
             </polygon>
         </g>
-    </svg>    
-
-
+    </svg>
+    
 </body>
 </html>
