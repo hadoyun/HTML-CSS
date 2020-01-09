@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <style>
+        canvas {
+            border: 1px solid blue;
+        }
+    </style>
+    <title>canvas</title>
+</head>
+
+<body onload = "init()">
+    <canvas id="canvas" width="500" height="300"></canvas>
+    <canvas id="canvas1" width="500" height="300"></canvas>
+    <script>
+        function init() {
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+            draw(ctx);
+        }
+
+        function draw(ctx) {
+            
+            ctx.beginPath(); // 경로의 시작을 알림
+            
+            ctx.moveTo(0,0); //0,0에서 부터 그림 그리기
+            ctx.lineTo(500,300); // X축 500 Y축 300까지
+            
+            ctx.lineWidth = 2; // 선두깨
+            ctx.strokeStyle = "#0033ff"; // 선 색상 (파란색)
+
+            ctx.stroke(); // 선을 그려줌
+
+            var canvas = document.getElementById("canvas1");
+            var ctx = canvas.getContext("2d");
+            ctx.beginPath();
+            
+            ctx.moveTo(0, 0);
+            ctx.lineTo(500, 300);
+            
+            ctx.moveTo(0, 300);
+            ctx.lineTo(500, 0);
+
+            ctx.moveTo(250, 0);
+            ctx.lineTo(250, 300);
+
+            ctx.moveTo(0, 150);
+            ctx.lineTo(500, 150);
+
+            ctx.lineWidth = 1;
+            ctx.strokeStyle = "black"; 
+            ctx.stroke(); //선을 그려줌
+        }
+
+    </script>
+
+</body>
+</html>
