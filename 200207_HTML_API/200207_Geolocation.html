@@ -23,6 +23,7 @@
                     function (position) {
                         document.getElementById("currentLat").innerHTML = position.coords.latitude;
                         document.getElementById("currentLon").innerHTML = position.coords.longitude;
+                        //얻어온 선택자 위치로 지정된 부분에 innerHTML로 보여준다.
                     },
                     function (error) {
                         alert("에러가 일어나써용! 에러 코드에용!" + " " + error.code);
