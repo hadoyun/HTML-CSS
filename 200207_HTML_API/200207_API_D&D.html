@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>D&D</title>
+    <style type="text/css">
+        
+        #drop_box {
+            width: 300px;
+            height: 100px;
+            display: block;
+            border: 3px solid #ff0000;
+        }
+
+        #box1 {
+            display: block;
+            margin: 20px 0;
+        }
+
+        #box2 {
+            display: block;
+            width: 280px;
+            height: 80px;
+            border: 1px solid #000 ;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id = "drop_box"> 여기에 이미지 또는 ~~~ </div>
+    <!-- 요소가 드롭되는 부분을 drop_box라는 아이디 선택지로 지정합니다. -->
+    <span id = "box1">
+        <img src = "http://css3.zerois.net/images/drag.png" alt="">
+        <!-- 이미지 이기 때문에 별다른 태그를 추가하지 않않습니다. -->
+    </span>
+    <div id="box2" draggable="true">여기에 이 박스를 드래그해서 상단 빨간 박스를 넣어보세용!
+    </div>
+    <!-- 3은 이미지를 넣을 텍스트 박스 이기 때문에 draggable을 true로 설정한다. -->
+
+    <script>
+        window.addEventListener("load", onload, false);
+
+        function onload() {
+            bx1 = document.getElementById("box1");
+            bx2 = document.getElementById("box2");
+
+            dbox = document.getElementById("drop_box");
+            // 특정 아이디 선택자를 하나의 요소로 가지고 와서 문서에서 객체로 변환을 해주게 된다.
+
+            bx1.addEventListener("dragstart", dragstart, false);
+            bx2.addEventListener("dragstart", dragstart, false);
+            // addEventListener 이벤트 또는 다수 이벤트 핸들링을 등록한다.
+
+            dbox.addEventListener("dragenter", function (e) {
+                e.preventDefault();
+            }, false);
+            // preventDefault = 클릭시에 발생하는 이벤트 방지
+
+            dbox.addEventListener("dragover", function (e) {
+                e.preventDefault();
+            }, false);
+
+            dbox.addEventListener("drop", dropped, false);
+        }
+
+        function dragstart(e) {
+            var value = e.currentTarget.innerHTML;
+            e.dataTransfer.setData("text", value);
+        }
+        //순수 이벤트를 호출한 값을 value에 저장한다.
+        //dataTransfer. 새로운 데이터 객체를 생성한다.;
+
+        function dropped(e) {
+            e.preventDefault();
+            e.currentTarget.innerHTML = e.dataTransfer.getData("text");
+        }
+        //HTML 문서 내부의 순수 이벤트를 호출한 값을 value에 적용한다.
+    </script>
+</body>
+</html>
