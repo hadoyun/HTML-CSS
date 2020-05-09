@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang ="ko">
     <head>
         <meta charset="utf=8"/>
         <title>HAVER</title>
         <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-    </head>
-    <body> 
-        <h1>
-         <a href='#'>헤이버</a>
-         <!-- 속성입니다. -->
+        <link rel="stylesheet" href="./css/haverManCss.css">
+    </head> 
+    <body>
+    <!-- 가운데 정렬을 위한 div  -->
+    <div id = "flexHeader">
+        <h1><!-- 해딩 테그 -->
+        <a href='#'>헤이버</a><!-- 속성입니다. -->
         </h1> 
         <h2>검색창</h2>
-        <fieldset>
+            <fieldset>
             <legend>검색</legend>
-            <input />
-            <button>검색</button>
-        </fieldset>
+                <input />
+                <button>검색</button>
+            </fieldset>
+    </div>
+    <nav>
         <ul> <!-- unordered list -->
             <li>메일</li> <!-- list item-->
             <li>카페</li> 
@@ -25,6 +29,8 @@
             <li>헤이버페이</li> 
             <li>헤이버tv</li>
         </ul>
+    </nav>
+    <main>
         <h2>실시간 검색어</h2>
         <h3>연합뉴스</h3>
         <ol>
@@ -54,5 +60,11 @@
         <h3>뉴스</h3>
         <h3>법률</h3>
         <h3>쇼핑</h3>
+    </main>
+    <footer>
+        <div>공지사항</div>
+        <div>creator</div>
+        <div>회사소개</div>
+    </footer>
     </body>
 </html>
