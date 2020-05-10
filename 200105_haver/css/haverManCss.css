@@ -1,7 +1,72 @@
-/* 선택자 설정하기  */
+* {
+    box-sizing: border-box;
+}
 
-#flexHeader{
+/* 선택자 설정하기  */
+.blind{
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+}
+
+#header-center{
     margin: 0 auto;
     width: 1080px;
 }
 
+#header-search h1{
+    width: 198px;
+    height: 48px;
+    display: inline-block;
+    background: url("../imgs/sp_search.png") -4px -4px no-repeat;
+    /* text를 유지하면서도 글자를 보이지 않게 하기 위해서 사용하는 방법 */
+    
+    /* 글자 들여쓰기
+    text-indent: 100%; 
+    /* 넘어가는 거 방지 */
+    /*overflow: hidden; */
+}   
+
+ #header-search h1 span{
+    display: none;
+}
+
+#header-search a{
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+/* #header-search h2{
+    display: none;
+} */
+
+#header-search fieldset{
+    margin-left: 20px;
+    /* padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 10px;
+    padding-right: 0px; */
+    padding: 12px 0 12xp 10px;
+    width: 521px;
+    height: 49px;
+    display: inline-block;
+    /* background-color: red; */
+    border: 2px solid pink; /* hex */
+    /* box-sizing: content-box; 기본 */
+    /* 웬만하면 모든 박스에 보더 기준으로 해주는 게 좋다..! */
+    /* box-sizing: border-box; */
+    
+    vertical-align: middle;
+}
+
+/* 브라우저의 기본 동작 제거 */
+#header-search fieldset input{
+    border: none;
+    padding: 0;
+    outline: none;
+}
+
+/* 형제 태그 끼리 height가 다르면 정렬이 달라짐 ==> 새로 정렬을 써야함 */
